@@ -14,8 +14,8 @@ export default class KeyboardWhisper {
       type: whisper.WhisperComponentType.Message,
       body: this.props.keyboardText,
     };
-
     return [message];
+    
   }
 
   show() {
@@ -28,7 +28,7 @@ export default class KeyboardWhisper {
       .then((newWhisper) => {
         this.whisper = newWhisper;
       });
-  }
+  } 
 
   close() {
     this.whisper.close(KeyboardWhisper.onClose);

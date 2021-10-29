@@ -4,13 +4,15 @@ import {
   keyboardListener,
   networkExample,
   openHandler,
+  customKeyboardListener,
 } from './aptitudes';
 
 (async function main() {
   console.log('Example Loop Started');
   clipboardListener.listen();
-  keyboardListener.listen();
-  networkExample.run();
-  openHandler.start();
-  new IntroWhisper().show();
+  // keyboardListener.listen();
+  customKeyboardListener.keyboardListenChar();
+  // networkExample.run();
+  // openHandler.start();
+  // new IntroWhisper().show();
 })();
